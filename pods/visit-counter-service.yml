@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: visit-counter-server1
+  labels:
+    app: visitor
+spec:
+  containers:
+  - name: visits-counter
+    image: ragav1294/visits-counter:v0.0.1

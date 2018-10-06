@@ -1,0 +1,14 @@
+version: '3'
+services:
+  python-app:
+    build: .
+    ports:
+      - "8000:8181"
+    volumes:
+      - /Users/ragavendrenr/Work/Other/docker-playground/python-250218:/python-250218
+    links:
+      - redis-server
+  redis-server:
+    image: "redis:alpine"
+    ports:
+      - "6000:6379"

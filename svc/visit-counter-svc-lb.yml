@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: visit-counter-lb
+spec:
+  selector:
+    app: visitor
+  ports:
+  - port: 8000
+    targetPort: 8181
+    protocol: TCP
+  type: NodePort
